@@ -11,17 +11,35 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class LuckyController extends AbstractController {
+class MainController extends AbstractController {
 
     /**
-     * @Route("/lucky/number/")
+     * @Route("/")
      */
-    public function number(){
-        $number = random_int(0, 255);
+    public function home(){
 
-        return $this->render('lucky/number.html.twig', [
-            'number' => $number,
-            ]
+        return $this->render('main/home.html.twig', []
         );
+    }
+
+    /**
+     * @Route("/login")
+     */
+    public function login(){
+        return $this->render('main/login.html.twig');
+    }
+
+    /**
+     * @Route("/menu")
+     */
+    public function menu(){
+        return $this->render('main/menu.html.twig');
+    }
+
+    /**
+     * @Route("/register")
+     */
+    public function register(){
+        return $this->render('main/register.html.twig');
     }
 }
