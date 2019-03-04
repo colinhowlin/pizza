@@ -23,13 +23,6 @@ class MainController extends AbstractController {
     }
 
     /**
-     * @Route("/login")
-     */
-    public function login(){
-        return $this->render('main/login.html.twig');
-    }
-
-    /**
      * @Route("/menu")
      */
     public function menu(){
